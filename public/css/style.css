@@ -1,13 +1,4 @@
-/*
-  Theme Name: DevFolio
-  Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 
-/*======================================
-//--//-->   STYLES GENERALES
-======================================*/
 
 body {
   background-color: #f5f5f5;
@@ -250,10 +241,6 @@ a:hover {
   margin-right: 10px;
 }
 
-.post-meta ul li label {
-  color: #0078ff;
-}
-
 /*------/ Ico Circle /------*/
 
 .ico-circle {
@@ -407,13 +394,13 @@ a:hover {
 .navbar-b {
   transition: all .5s ease-in-out;
   background-color: transparent;
-  /* padding-top: 1.563rem;
-  padding-bottom: 1.563rem; */
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
   background-color: #000;
 }
 
 .navbar-b.navbar-reduce {
-  box-shadow: 0px 4px 6px 0px #c4c4c4b5;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 
 .navbar-b.navbar-trans .nav-item,
@@ -452,12 +439,12 @@ a:hover {
   width: 35px;
 }
 
-.navbar-b.navbar-trans .show>.nav-link:before,
-.navbar-b.navbar-trans .active>.nav-link:before,
+.navbar-b.navbar-trans .show > .nav-link:before,
+.navbar-b.navbar-trans .active > .nav-link:before,
 .navbar-b.navbar-trans .nav-link.show:before,
 .navbar-b.navbar-trans .nav-link.active:before,
-.navbar-b.navbar-reduce .show>.nav-link:before,
-.navbar-b.navbar-reduce .active>.nav-link:before,
+.navbar-b.navbar-reduce .show > .nav-link:before,
+.navbar-b.navbar-reduce .active > .nav-link:before,
 .navbar-b.navbar-reduce .nav-link.show:before,
 .navbar-b.navbar-reduce .nav-link.active:before {
   width: 35px;
@@ -471,8 +458,8 @@ a:hover {
   color: #fff;
 }
 
-.navbar-b.navbar-trans .show>.nav-link,
-.navbar-b.navbar-trans .active>.nav-link,
+.navbar-b.navbar-trans .show > .nav-link,
+.navbar-b.navbar-trans .active > .nav-link,
 .navbar-b.navbar-trans .nav-link.show,
 .navbar-b.navbar-trans .nav-link.active {
   color: #fff;
@@ -497,8 +484,8 @@ a:hover {
   color: #0078ff;
 }
 
-.navbar-b.navbar-reduce .show>.nav-link,
-.navbar-b.navbar-reduce .active>.nav-link,
+.navbar-b.navbar-reduce .show > .nav-link,
+.navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
   color: #0078ff;
@@ -609,7 +596,6 @@ a:hover {
   height: 100vh;
   position: relative;
   color: #fff;
-  background-image: url('../public/images/intro-bg-2.jpg');
 }
 
 .intro .intro-content {
@@ -639,9 +625,9 @@ a:hover {
   font-weight: 300;
 }
 
-/* .intro .text-slider-items {
+.intro .text-slider-items {
   display: none;
-} */
+}
 
 .intro-single {
   height: 350px;
@@ -909,18 +895,6 @@ a:hover {
   margin-top: .6rem;
 }
 
-.card-title a {
-  text-decoration: none;
-  color: #1e1e1e;
-  transition: all 0.5s ease-in-out;
-}
-
-.card-title a:hover {
-  color: #0078ff;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
 .card-blog .card-description {
   color: #4e4e4e;
 }
@@ -1077,7 +1051,6 @@ a:hover {
 
 .footer-paralax {
   padding: 4rem 0 0 0;
-  background-image: url('../public/images/overlay-bg.jpg');
 }
 
 .contact-mf {
@@ -1283,22 +1256,3 @@ footer .credits a {
   }
 }
 
-.article-content img {
-  width: 100%;
-}
-
-.card-img .img-fluid {
-  min-height: 280px;
-}
-
-.list-sidebar li a {
-  color: #1e1e1e;
-  transition: all 0.5s ease-in-out;
-  text-decoration: none;
-}
-
-.list-sidebar li a:hover {
-  color: #0078ff;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
