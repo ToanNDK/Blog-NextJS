@@ -24,10 +24,10 @@ const About = () => {
                                         </div>
                                         <div className="col-sm-6 col-md-7">
                                             <div className="about-info mt-5">
-                                                <p><span className="title-s">Name: </span> <span>NXB Dev</span></p>
+                                                <p><span className="title-s">Name: </span> <span>COMPABLOG</span></p>
                                                 <p><span className="title-s">Profile: </span> <span>Fullstack Js Developer</span></p>
                                                 <p><span className="title-s">Email: </span> <span>contact@example.com</span></p>
-                                                <p><span className="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                                                <p><span className="title-s">Phone: </span> <span>(081) 358-1390</span></p>
                                             </div>
                                         </div>
                                     </div>
