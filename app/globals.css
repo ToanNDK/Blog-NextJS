@@ -1302,3 +1302,28 @@ footer .credits a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
+.custom-card {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 25px 20px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.custom-card p {
+  font-size: 15px;
+  color: #555;
+}

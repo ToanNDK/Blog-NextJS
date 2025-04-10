@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../node_modules/font-awesome/css/font-awesome.min.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+import AnalyticsTracker from '@/components/AnalyticsTracker' // ✅ nếu có
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,13 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics /> {/* ✅ Google Analytics */}
+        <AnalyticsTracker /> {/* ✅ Track khi chuyển trang (nếu dùng App Router) */}
+
         <Nav />
         {children}
         <Footer />
+
+        {/* ✅ Các script gốc bạn đã có */}
+        <Script src='../lib/jquery/jquery.min.js' />
+        <Script src='../lib/bootstrap/js/bootstrap.min.js' />
+        <Script src='../js/main.js' />
       </body>
-      <Script src='../lib/jquery/jquery.min.js' />
-      <Script src='../lib/bootstrap/js/bootstrap.min.js' />
-      <Script src='../js/main.js' />
     </html>
   )
 }

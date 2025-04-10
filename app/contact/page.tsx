@@ -1,99 +1,88 @@
-import React from 'react'
+import React from 'react' 
 import { Metadata } from 'next'
-
+import '../globals.css'
 export const metadata: Metadata = {
-    title: 'Contact',
-    description: 'Contact page',
+  title: 'Liên hệ',
+  description: 'Trang liên hệ của chúng tôi',
 }
 
-const Contact = () => {
-    return (
-        <section className="paralax-mf footer-paralax bg-image sect-mt4 route">
-            <div className="overlay-mf"></div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <div className="contact-mf">
-                            <div id="contact" className="box-shadow-full">
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="title-box-2">
-                                            <h5 className="title-left">
-                                                Send Message Us
-                                            </h5>
-                                        </div>
-                                        <div>
-                                            <form action="" method="post" role="form" className="contactForm">
-                                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                                <div id="errormessage"></div>
-                                                <div className="row">
-                                                    <div className="col-md-12 mb-3">
-                                                        <div className="form-group">
-                                                            <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                                            <div className="validation"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-12 mb-3">
-                                                        <div className="form-group">
-                                                            <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                                            <div className="validation"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-12 mb-3">
-                                                        <div className="form-group">
-                                                            <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                                            <div className="validation"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-12 mb-3">
-                                                        <div className="form-group">
-                                                            <textarea className="form-control" name="message" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                                            <div className="validation"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-12">
-                                                        <button type="submit" className="button button-a button-big button-rouded">Send Message</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <div className="title-box-2 pt-4 pt-md-0">
-                                            <h5 className="title-left">
-                                                Get in Touch
-                                            </h5>
-                                        </div>
-                                        <div className="more-info">
-                                            <p className="lead">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
-                                                expedita aperiam aliquid at.
-                                                Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
-                                                mollitia inventore?
-                                            </p>
-                                            <ul className="list-ico">
-                                                <li><i className='fa fa-map'></i> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                                <li><i className="fa fa-phone" aria-hidden="true"></i> (617) 557-0089</li>
-                                                <li><i className="fa fa-envelope" aria-hidden="true"></i> contact@example.com</li>
-                                            </ul>
-                                        </div>
-                                        <div className="socials">
-                                            <ul>
-                                                <li><a href=""><span className="ico-circle"><i className="fa fa-facebook" aria-hidden="true"></i></span></a></li>
-                                                <li><a href=""><span className="ico-circle"><i className="fa fa-instagram" aria-hidden="true"></i></span></a></li>
-                                                <li><a href=""><span className="ico-circle"><i className="fa fa-twitter"></i></span></a></li>
-                                                <li><a href=""><span className="ico-circle"><i className="fa fa-pinterest"></i></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const exploreCards = [
+  {
+    title: '🎯 Tùy chỉnh giao diện',
+    content: 'Tạo website với phong cách riêng của bạn chỉ trong vài cú nhấp chuột.',
+    borderColor: 'purple',
+  },
+  {
+    title: '📈 Tối ưu SEO',
+    content: 'Đưa bài viết của bạn lên top Google với những công cụ mạnh mẽ.',
+    borderColor: 'green',
+  },
+  {
+    title: '💬 Chatbot AI',
+    content: 'Tích hợp chatbot AI thông minh hỗ trợ khách hàng 24/7.',
+    borderColor: 'orange',
+  },
+  {
+    title: '📦 Dịch vụ hosting',
+    content: 'Hosting nhanh, bảo mật và tối ưu cho blog và trang cá nhân.',
+  },
+]
+
+export default function Contact() {
+  return (
+<section className="py-5 bg-light" style={{ scrollMarginTop: '100px' }}>
+<div className="container">
+        {/* Tiêu đề */}
+        <div className="row mb-5 text-center">
+          <div className="col">
+            <h2 className="fw-bold">Liên hệ với chúng tôi</h2>
+            <p className="text-muted">Chúng tôi rất mong được nghe phản hồi từ bạn!</p>
+          </div>
+        </div>
+
+        <div className="row g-4">
+          {/* Form */}
+          <div className="col-md-6">
+            <form className="bg-white p-4 shadow rounded">
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">Họ và tên</label>
+                <input type="text" className="form-control" id="name" placeholder="Nhập tên của bạn" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" className="form-control" id="email" placeholder="user@example.com" />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="subject" className="form-label">Tiêu đề</label>
+                <input type="text" className="form-control" id="subject" placeholder="Về vấn đề..." />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">Nội dung</label>
+                <textarea className="form-control" id="message" rows={5} placeholder="Viết nội dung liên hệ..."></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary w-100">
+                <i className="fa fa-paper-plane me-2"></i>Gửi tin nhắn
+              </button>
+            </form>
+          </div>
+
+          {/* Card Khám phá thêm */}
+          <div className="col-md-6">
+            <div className="d-flex flex-column gap-4">
+            {exploreCards.map((card, index) => (
+  <div
+    key={index}
+    className={`custom-card ${index % 2 === 0 ? 'align-self-start' : 'align-self-end'}`}
+    style={{ borderColor: card.borderColor }}
+  >
+    <h5 className="fw-bold">{card.title}</h5>
+    <p className="text-muted mb-0">{card.content}</p>
+  </div>
+))}
             </div>
-        </section>
-    )
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
-
-export default Contact

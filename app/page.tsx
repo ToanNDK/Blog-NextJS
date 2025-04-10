@@ -20,8 +20,8 @@ export default async function Home() {
         <div className="intro-content display-table">
           <div className="table-cell">
             <div className="container">
-              <h1 className="intro-title mb-4">I am a coder</h1>
-              <p className="intro-subtitle"><span className="text-slider-items">I don't always code in JavaScript, but when I do, it's fullstack.</span><strong className="text-slider"></strong></p>
+              <h1 className="intro-title mb-4">COMPABLOG</h1>
+              <p className="intro-subtitle"><span className="text-slider-items">Bắt trend công nghệ – Cập nhật mỗi ngày!</span><strong className="text-slider"></strong></p>
             </div>
           </div>
         </div>
