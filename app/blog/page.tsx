@@ -68,7 +68,11 @@ const Blog = async () => {
                 <div className="card-footer">
                   <div className="post-author">
                     <img
-                      src={`${process.env.API_URL}/${item.user.avatar}`}
+                     src={
+                      item.user.avatar
+                        ? `${process.env.API_URL}/${item.user.avatar.startsWith("uploads/") ? item.user.avatar : `uploads/${item.user.avatar}`}`
+                        : "/default-avatar.png"
+                    }
                       alt=""
                       className="avatar rounded-circle"
                     />

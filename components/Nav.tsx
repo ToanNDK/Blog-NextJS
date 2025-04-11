@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div className="container">
-        <Link href='/'className="navbar-brand js-scroll" ><img src="../images/logo.png" width="45px" /></Link>
+        <Link href='/'className="navbar-brand js-scroll" ><img src="../images/favicon.png" width="45px" /></Link>
      
       <button className="navbar-toggler collapsed" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
